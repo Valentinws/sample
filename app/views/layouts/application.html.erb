@@ -3,16 +3,17 @@
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <meta charset="utf-8">
-    <%= render 'layouts/rails_default' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= render "layouts/rails_default" %>
 
    
   
-    <%= render 'layouts/shim' %>
+    <%= render "layouts/shim" %>
   
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render "layouts/header" %>
     
     <div class="container">
       <% flash.each do |message_type, message| %>
@@ -25,7 +26,7 @@
       
       
     <%= yield %>
-    <%= render 'layouts/footer' %>
+    <%= render "layouts/footer" %>
     <%= debug(params) if Rails.env.development? %>
     </div>
   
